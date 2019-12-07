@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TimeTable.TuesdayP">
+    <Page.Resources>
+        <Style x:Key="GridStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="DarkCyan"/>
+        </Style>
+        <Style x:Key="EntryboxStyle" TargetType="Entry">
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+    </Page.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!--Default Page text-->
+                <Label Text="Tuesday's Timetable"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    Margin="10"
+                    FontSize="Large"/>
+                <!--Creating Default Grid-->
+                <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" ColumnSpacing="10" RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Column Labels-->
+                    <Label Text="Time" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Large" Grid.Row="0" Grid.Column="0" />
+                    <Label Text="Task" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Large" Grid.Row="0" Grid.Column="1" />
+
+                    <!--Time Labels-->
+                    <Label Text="08.00" Style="{StaticResource GridStyle}" Grid.Row="1" Grid.Column="0" />
+                    <Label Text="09.00" Style="{StaticResource GridStyle}" Grid.Row="2" Grid.Column="0" />
+                    <Label Text="10.00" Style="{StaticResource GridStyle}" Grid.Row="3" Grid.Column="0" />
+                    <Label Text="11.00" Style="{StaticResource GridStyle}" Grid.Row="4" Grid.Column="0" />
+                    <Label Text="12.00" Style="{StaticResource GridStyle}" Grid.Row="5" Grid.Column="0" />
+                    <Label Text="13.00" Style="{StaticResource GridStyle}" Grid.Row="6" Grid.Column="0" />
+                    <Label Text="14.00" Style="{StaticResource GridStyle}" Grid.Row="7" Grid.Column="0" />
+                    <Label Text="15.00" Style="{StaticResource GridStyle}" Grid.Row="8" Grid.Column="0" />
+                    <Label Text="16.00" Style="{StaticResource GridStyle}" Grid.Row="9" Grid.Column="0" />
+                    <Label Text="17.00" Style="{StaticResource GridStyle}" Grid.Row="10" Grid.Column="0" />
+                    <Label Text="18.00" Style="{StaticResource GridStyle}" Grid.Row="11" Grid.Column="0" />
+                    <!--Button Grids-->
+                    <!--Input Information-->
+                    <Label x:Name="tuesdayEightAmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="1" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayNineAmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="2" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayTenAmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="3" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayElevenAmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="4" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayTwelvePmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="5" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayOnePmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="6" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayTwoPmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="7" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayThreePmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="8" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayFourPmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="9" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdayFivePmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="10" Grid.Column="1" IsVisible="True"/>
+                    <Label x:Name="tuesdaySixPmLabel" Text=" " Style="{StaticResource GridStyle}" Grid.Row="11" Grid.Column="1" IsVisible="True"/>
+
+                    <!--Entry in Grid (After Edit is Clicked)-->
+                    <Entry x:Name="tuesdayEightAmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="1" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayNineAmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="2" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayTenAmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="3" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayElevenAmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="4" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayTwelvePmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="5" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayOnePmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="6" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayTwoPmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="7" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayThreePmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="8" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayFourPmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="9" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdayFivePmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="10" Grid.Column="1" IsVisible="False"/>
+                    <Entry x:Name="tuesdaySixPmEntry" Style="{StaticResource EntryboxStyle}" Grid.Row="11" Grid.Column="1" IsVisible="False"/>
+                </Grid>
+
+                <!--Edit and Submit Button-->
+                <Button ClassId="editButton" Text="Edit" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" Margin="40" Padding="30,10,30,10" BackgroundColor="Red" Clicked="SubmitandEditButton_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+    </ContentPage>

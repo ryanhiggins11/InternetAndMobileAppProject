@@ -1,0 +1,1 @@
+C:\Users\ryan1\OneDrive\Desktop\MobileAppProject\TimeTable\TimeTable\TimeTable.UWP\TimeTable.UWP.csproj;x86

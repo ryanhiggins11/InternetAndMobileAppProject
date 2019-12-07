@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TimeTable.MainPage">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="DarkCyan">
+            <!--Name of the Application-->
+            <Label Text="Handy Timetable App For Students" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" 
+           Margin="50,50,50,50"
+           TextColor="Black"
+           FontSize="Large"/>
+           
+ 
+            <!--Main Page Grid for Nicer Layout-->
+            <Grid VerticalOptions="Center" HorizontalOptions="Center" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button x:Name="MondayButton" Text="Monday"
+                Clicked="MondayButton_Clicked"
+                FontSize="Medium"
+                BackgroundColor="LightCoral"
+                Grid.Row="0"
+                Grid.Column="0"/>
+
+                <Button x:Name="TuesdayButton" Text="Tuesday"
+                Clicked="TuesdayButton_Clicked"
+                FontSize="Medium"
+                BackgroundColor="LightCoral"      
+                Grid.Row="1"
+                Grid.Column="0"/>
+
+                <Button x:Name="WednesdayButton" Text="Wednesday"
+                Clicked="WednesdayButton_Clicked"
+                FontSize="Medium"
+                BackgroundColor="LightCoral"         
+                Grid.Row="2"
+                Grid.Column="0"/>
+
+                <Button x:Name="ThursdayButton" Text="Thursday"
+                Clicked="ThursdayButton_Clicked"
+                FontSize="Medium"
+                BackgroundColor="LightCoral"   
+                Grid.Row="3"
+                Grid.Column="0"/>
+
+                <Button x:Name="FridayButton" Text="Friday"
+                Clicked="FridayButton_Clicked"
+                FontSize="Medium"
+                BackgroundColor="LightCoral"   
+                Grid.Row="4"
+                Grid.Column="0"/>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
